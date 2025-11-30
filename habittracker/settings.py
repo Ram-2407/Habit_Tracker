@@ -25,9 +25,7 @@ SECRET_KEY = 'django-insecure-stz*qsnj$bpn@d-!wjx#!ckkh3w(-=gyw7yy8^asbl$is3sq(@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "habit-tracker-vjl2.onrender.com"
-]
+ALLOWED_HOSTS = ["*"]
 
 
 
