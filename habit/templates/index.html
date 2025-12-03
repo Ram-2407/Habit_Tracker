@@ -519,7 +519,9 @@
         // Display report
         function displayReport(data, elementId, type) {
             const container = document.getElementById(elementId);
-            const reportData = data[type + '_report'];
+            // normalize type (replace hyphens with underscores) so keys match server-side names
+            const key = type.replace(/-/g, '_') + '_report';
+            const reportData = data[key];
             
             if (!reportData || reportData.length === 0) {
                 container.innerHTML = '<div class="loading">No data available for this report</div>';
